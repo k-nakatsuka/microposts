@@ -1,21 +1,16 @@
-<h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
-</h1>
-
-<h2>プロフィール</h2>
+<h1>地域とプロフィールの編集</h1><%# new.htmlコピー %>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
     
-      <%= f.label :area %>
+      <%= f.label :地域 %>
       <%= f.text_field :area, class: 'form-control' %>
       
       <%= f.label :profile %>
-      <%= f.text_area :profile, :size => "40x30", :class=> "form-control" %>
-              <%# area profile %>
+      <%= f.text_field :profile, class: 'form-control' %>
+      <%= f.submit "更新ボタン", class: "btn btn-large btn-primary" %>
     <% end %>　　　<%# Create my account %>
   </div>
 </div>
