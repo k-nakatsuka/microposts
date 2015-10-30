@@ -4,6 +4,8 @@ class UsersController < ApplicationController
     #　paramsの内容は{id:8}とか
     #　/users/:id　というURLでアクセスしてきている。
     @user = User.find(params[:id])
+    @users = User.all #追記
+    
   end
   
   def new
